@@ -39,14 +39,18 @@ function displayAll() {
 // Display Names with Starting Letter
 function searchStartingLetter() {
   container.innerHTML = "Display Starting Letter";
+  +prompt("Please enter starting letter:");
 }
 
 // Display Names with Exact Length
 function searchExactLength() {
   container.innerHTML = "Display Exact Length";
+  +prompt("Please enter exact length:");
 }
 
 // Display Names within a Range of Lengths
 function searchRangeLength() {
   container.innerHTML = "Display Range Length";
+  +prompt("Please enter minimum length:");
+  +prompt("Please enter maximum length");
 }
