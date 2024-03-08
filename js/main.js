@@ -33,6 +33,7 @@ function goBtnClicked() {
 
 // Display All Characters
 function displayAll() {
+  container.innerHTML = "Display Baby Names";
   container.innerHTML = babyNames;
   let nameListLength = babyNames.length;
   nameCountSpan.innerHTML = nameListLength;
