@@ -33,10 +33,10 @@ function goBtnClicked() {
 
 // Display All Characters
 function displayAll() {
-  container.innerHTML = "Display Baby Names";
-  container.innerHTML = babyNames;
   let nameListLength = babyNames.length;
+  let babyNameArray = babyNames.split(",");
   nameCountSpan.innerHTML = nameListLength;
+  container.innerHTML = babyNameArray;
 }
 
 // Display Names with Starting Letter
@@ -53,7 +53,7 @@ function searchExactLength() {
 
 // Display Names within a Range of Lengths
 function searchRangeLength() {
-  container.innerHTML = "Display Range Length";
+  let maxVal = (container.innerHTML = "Display Range Length");
   +prompt("Please enter minimum length:");
   +prompt("Please enter maximum length");
 }
