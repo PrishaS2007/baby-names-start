@@ -54,9 +54,6 @@ function searchStartingLetter() {
     }
   }
   nameCountSpan.innerHTML = newList.length + "<br/>";
-
-  container.innerHTML = "Display Starting Letter";
-  +prompt("Please enter starting letter:");
 }
 
 // Display Names with Exact Length
@@ -70,9 +67,6 @@ function searchExactLength() {
     }
   }
   nameCountSpan.innerHTML = newList.length + "<br/>";
-
-  container.innerHTML = "Display Exact Length";
-  +prompt("Please enter exact length:");
 }
 
 // Display Names within a Range of Lengths
