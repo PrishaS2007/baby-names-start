@@ -21,6 +21,7 @@ function goBtnClicked() {
 
   // Process Menu Selection
   if (selection === "display-all") {
+    container.innerHTML = "";
     displayAll();
   } else if (selection === "starting-letter") {
     searchStartingLetter();
