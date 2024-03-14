@@ -21,27 +21,26 @@ function goBtnClicked() {
 
   // Process Menu Selection
   if (selection === "display-all") {
-    container.innerHTML = "";
     displayAll();
   } else if (selection === "starting-letter") {
-    container.innerHTML = "";
     searchStartingLetter();
   } else if (selection === "exact-length") {
-    container.innerHTML = "";
     searchExactLength();
   } else if (selection === "range-length") {
-    container.innerHTML = "";
     searchRangeLength();
   }
 }
 
 // Display All Characters
 function displayAll() {
-  nameCountSpan.innerHTML = babyNames.length +  '<br/>';
+  nameCountSpan.innerHTML = babyNames.length + "<br/>";
   for (let i = 0; i < babyNames.length; i++) {
-    container.innerHTML += '<br/>' + babyNames[i] + '<br/>';
-    }
-    
+    container.innerHTML += "<br/>" + babyNames[i] + "<br/>";
+  }
+
+  let nameListLength = babyNames.length;
+  nameCountSpan.innerHTML = nameListLength;
+  container.innerHTML = babyNames;
 }
 
 // Display Names with Starting Letter
@@ -50,12 +49,14 @@ function searchStartingLetter() {
   let newList = [];
   for (let i = 0; i < babyNames.length; i++) {
     if (babyNames[i][0] === letter) {
-      container.innerHTML += '<br/>' + babyNames[i] + '<br/>';
+      container.innerHTML += "<br/>" + babyNames[i] + "<br/>";
       newList.push(babyNames[i]);
     }
-    }
-    nameCountSpan.innerHTML = newList.length +  '<br/>';
+  }
+  nameCountSpan.innerHTML = newList.length + "<br/>";
 
+  container.innerHTML = "Display Starting Letter";
+  +prompt("Please enter starting letter:");
 }
 
 // Display Names with Exact Length
@@ -64,24 +65,32 @@ function searchExactLength() {
   let newList = [];
   for (let i = 0; i < babyNames.length; i++) {
     if (babyNames[i].length === userNum) {
-      container.innerHTML += '<br/>' + babyNames[i] + '<br/>';
+      container.innerHTML += "<br/>" + babyNames[i] + "<br/>";
       newList.push(babyNames[i]);
     }
-    }
-    nameCountSpan.innerHTML = newList.length +  '<br/>';
+  }
+  nameCountSpan.innerHTML = newList.length + "<br/>";
 
+  container.innerHTML = "Display Exact Length";
+  +prompt("Please enter exact length:");
 }
 
 // Display Names within a Range of Lengths
 function searchRangeLength() {
   let userNumLow = +prompt("Please enter minimum length:");
   let userNumHigh = +prompt("Please enter maximum length:");
-   let newList = [];
+  let newList = [];
   for (let i = 0; i < babyNames.length; i++) {
-    if (babyNames[i].length >= userNumLow && babyNames[i].length <= userNumHigh) {
-      container.innerHTML += '<br/>' + babyNames[i] + '<br/>';
+    if (
+      babyNames[i].length >= userNumLow &&
+      babyNames[i].length <= userNumHigh
+    ) {
+      container.innerHTML += "<br/>" + babyNames[i] + "<br/>";
       newList.push(babyNames[i]);
     }
-    }
-    nameCountSpan.innerHTML = newList.length +  '<br/>';
+  }
+  nameCountSpan.innerHTML = newList.length + "<br/>";
+  let maxVal = (container.innerHTML = "Display Range Length");
+  +prompt("Please enter minimum length:");
+  +prompt("Please enter maximum length");
 }
