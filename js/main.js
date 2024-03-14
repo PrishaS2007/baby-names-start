@@ -24,10 +24,13 @@ function goBtnClicked() {
     container.innerHTML = "";
     displayAll();
   } else if (selection === "starting-letter") {
+    container.innerHTML = "";
     searchStartingLetter();
   } else if (selection === "exact-length") {
+    container.innerHTML = "";
     searchExactLength();
   } else if (selection === "range-length") {
+    container.innerHTML = "";
     searchRangeLength();
   }
 }
@@ -38,10 +41,6 @@ function displayAll() {
   for (let i = 0; i < babyNames.length; i++) {
     container.innerHTML += "<br/>" + babyNames[i] + "<br/>";
   }
-
-  let nameListLength = babyNames.length;
-  nameCountSpan.innerHTML = nameListLength;
-  container.innerHTML = babyNames;
 }
 
 // Display Names with Starting Letter
@@ -91,7 +90,4 @@ function searchRangeLength() {
     }
   }
   nameCountSpan.innerHTML = newList.length + "<br/>";
-  let maxVal = (container.innerHTML = "Display Range Length");
-  +prompt("Please enter minimum length:");
-  +prompt("Please enter maximum length");
 }
