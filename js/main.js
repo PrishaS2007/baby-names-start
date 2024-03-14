@@ -37,7 +37,7 @@ function goBtnClicked() {
 
 // Display All Characters
 function displayAll() {
-  nameCountSpan.innerHTML = babyNames.length + "<br/>";
+  nameCountSpan.innerHTML = babyNames.length;
   for (let i = 0; i < babyNames.length; i++) {
     container.innerHTML += "<br/>" + babyNames[i] + "<br/>";
   }
